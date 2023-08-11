@@ -27,8 +27,6 @@ import {
   setPolicies,
 } from '../login.slice';
 import { LoginSchema } from '../schema/login.schema';
-import { setMerchantInfo } from 'src/profile/common/reducers/merchant-profile.slice';
-import { useGetMerchantInfo } from '../hook/useGetMerchantInfo';
 import useDeepEffect from 'src/common/hooks/useDeepEffect';
 import { useTranslation } from 'react-i18next';
 // ----------------------------------------------------------------------
@@ -54,6 +52,7 @@ export default function LoginForm() {
       variant: 'success',
       autoHideDuration: 1000,
     });
+    navigate(PATH_DASHBOARD.root);
   };
   const onError = () => {
     enqueueSnackbar(t('auth.login.loginFailure'), {
@@ -62,14 +61,7 @@ export default function LoginForm() {
   };
 
   const { mutate, isSuccess } = useAuthlogin({ onSuccess, onError });
-  const { data } = useGetMerchantInfo(isSuccess);
 
-  useDeepCompareEffect(() => {
-    if (isSuccess && data) {
-      dispatch(setMerchantInfo(data));
-      navigate(PATH_DASHBOARD.root);
-    }
-  }, [isSuccess, data]);
   const onSubmit = (data: IFormLoginValuesProps) => {
     dispatch(setEmail(data.email));
     mutate({ email: data.email, password: data.password });

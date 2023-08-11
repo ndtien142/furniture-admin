@@ -1,13 +1,13 @@
 // auth
-export const API_LOGIN = 'merchant/auth/login';
+export const API_LOGIN = 'user/login';
 
 // routes article
 export const API_PRESIGNED = '/merchant/file/presigned-url';
 export const API_PRESIGN_URL = '/merchant/file/presigned-url';
-export const API_ADMIN_FORGOTPASSWORD = '/admin/forgot-password';
+export const API_ADMIN_FORGOT_PASSWORD = '/admin/forgot-password';
 
 // --------------------
-export const API_MERCHANT_FORGOTPASSWORD = '/merchat/forgot-password';
+export const API_MERCHANT_FORGOT_PASSWORD = '/merchat/forgot-password';
 export const API_MERCHANT_REGISTER = '/merchant/auth/register';
 export const API_MERCHANT_PROFILE = '/merchant/profile';
 export const API_TAG = '/merchant/tag';

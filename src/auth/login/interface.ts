@@ -25,8 +25,16 @@ export interface IResForgotPass {
 }
 
 export interface IResLogin {
-  accessToken: string;
-  refreshToken: string;
+  status: string;
+  message: string;
+  data: {
+    jwt: string;
+    email: string;
+    name: string;
+    phone: string;
+    address: string;
+    role_id: number;
+  };
 }
 
 export interface IResInfo {
