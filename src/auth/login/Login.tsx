@@ -1,22 +1,9 @@
-import { capitalCase } from 'change-case';
-import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
-import {
-  Box,
-  Card,
-  Stack,
-  Link,
-  Alert,
-  Tooltip,
-  Container,
-  Typography,
-} from '@mui/material';
+import { Box, Stack, Container, Typography } from '@mui/material';
 import useAuth from 'src/common/hooks/useAuth';
 import Page from 'src/common/components/Page';
-import Image from 'src/common/components/Image';
 import LoginForm from './component/LoginForm';
-import { PATH_AUTH } from 'src/common/routes/paths';
 import useResponsive from 'src/common/hooks/useResponsive';
 import { useSelector } from 'react-redux';
 import { isExpiredSelector, setIsExpired } from './login.slice';
@@ -27,7 +14,6 @@ import {
 } from 'src/common/hooks/useMessage';
 import vn from '../../common/locales/vn';
 import { dispatch } from '../../common/redux/store';
-import { DEFAULT_MAIN_COLOR } from '../../common/constants/common.constants';
 const RootStyle = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     display: 'flex',

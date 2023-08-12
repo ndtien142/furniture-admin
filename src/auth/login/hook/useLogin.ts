@@ -1,5 +1,4 @@
 import { useMutation } from 'react-query';
-import { useSelector } from 'react-redux';
 import { dispatch } from 'src/common/redux/store';
 import { setAccessToken, setLogin, setRefreshToken } from '../auth.slice';
 import { ILoginCallback } from '../interface';
@@ -10,11 +9,10 @@ export const useAuthlogin = ({ onError, onSuccess }: ILoginCallback) => {
     ...useMutation(getAuth, {
       onSuccess: (data) => {
         if (!data) return;
-        const { accessToken,refreshToken } = data;
-        dispatch(setAccessToken('Bearer ' + accessToken));
-        dispatch(setRefreshToken(refreshToken));
+        console.log(data);
+        dispatch(setAccessToken('Bearer ' + data?.data?.jwt));
+        dispatch(setRefreshToken(''));
         dispatch(setLogin(true));
- 
         onSuccess();
       },
       onError,
