@@ -37,6 +37,18 @@ export interface IResLogin {
   };
 }
 
+export interface IResMerchantInfo {
+  status: string;
+  message: string;
+  data: {
+    email: string;
+    role_id: number;
+    name: string;
+    phone: string;
+    address: string;
+  };
+}
+
 export interface IResInfo {
   id: number;
   email: string;

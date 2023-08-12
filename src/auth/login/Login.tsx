@@ -8,10 +8,7 @@ import useResponsive from 'src/common/hooks/useResponsive';
 import { useSelector } from 'react-redux';
 import { isExpiredSelector, setIsExpired } from './login.slice';
 import { useEffect } from 'react';
-import {
-  default as useMessage,
-  default as useShowSnackbar,
-} from 'src/common/hooks/useMessage';
+import { default as useMessage } from 'src/common/hooks/useMessage';
 import vn from '../../common/locales/vn';
 import { dispatch } from '../../common/redux/store';
 const RootStyle = styled('div')(({ theme }) => ({
@@ -108,7 +105,6 @@ export default function Login() {
             />
           </SectionStyle>
         )}
-
         <Container maxWidth="sm">
           <ContentStyle>
             <Stack
@@ -133,7 +129,6 @@ export default function Login() {
                 <Typography variant="h4" color="primary"></Typography>
               </Stack>
             </Stack>
-
             <LoginForm />
           </ContentStyle>
         </Container>

@@ -6,10 +6,9 @@ import { LoadingButton } from '@mui/lab';
 import { IconButton, InputAdornment, Link, Stack, Typography } from '@mui/material';
 // components
 import { useSnackbar } from 'notistack';
-import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
-import { dispatch, useDispatch } from 'src/common/redux/store';
+import { useDispatch } from 'src/common/redux/store';
 import { PATH_AUTH, PATH_DASHBOARD } from 'src/common/routes/paths';
 import {
   FormProvider,
@@ -97,9 +96,6 @@ export default function LoginForm() {
         sx={{ my: 2 }}
       >
         <RHFCheckbox name="remember" label={t('auth.login.labelRememberMe')} />
-        {/* <Typography sx={{ fontSize: '13px' }}>
-          <Link to={PATH_AUTH.forgotPassword}>Forgot Password</Link>
-        </Typography> */}
       </Stack>
 
       <LoadingButton

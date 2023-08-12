@@ -3,4 +3,4 @@ import axiosInstance from '../../common/utils/axios';
 import { IDataUpdatePassword } from './interfaces';
 
 export const editPassword = ({ data }: { data: IDataUpdatePassword }) =>
-  axiosInstance.patch(`${API_MERCHANT_PASSWORD}`, data);
+  axiosInstance.post(`${API_MERCHANT_PASSWORD}`, data);
