@@ -72,7 +72,6 @@ export default function Router() {
             { path: 'change-password', element: <AccountChangePassword /> },
           ],
         },
-
         {
           path: PATH_DASHBOARD.tag.root,
           children: [
@@ -87,6 +86,15 @@ export default function Router() {
             {
               path: PATH_DASHBOARD.tag.edit,
               element: <EditTag />,
+            },
+          ],
+        },
+        {
+          path: PATH_DASHBOARD.product.root,
+          children: [
+            {
+              path: PATH_DASHBOARD.product.list,
+              element: <ProductListContainer />,
             },
           ],
         },
@@ -138,3 +146,8 @@ const NewTag = Loadable(lazy(() => import('src/tag/new-tag/index')));
 const TagList = Loadable(lazy(() => import('src/tag/tag-list/index')));
 
 const EditTag = Loadable(lazy(() => import('src/tag/tag-edit/index')));
+
+// Product
+const ProductListContainer = Loadable(
+  lazy(() => import('src/product/list-product/index'))
+);

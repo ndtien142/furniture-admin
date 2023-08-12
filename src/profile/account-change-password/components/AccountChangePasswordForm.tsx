@@ -56,8 +56,8 @@ export default function AccountChangePasswordForm() {
   });
   const onSubmit = async (data: FormValuesProps) => {
     const dataUpdate: IDataUpdatePassword = {
-      password: data.oldPassword,
-      newPassword: data.confirmNewPassword,
+      email: 'nv1@gmail.com',
+      new_password: data.confirmNewPassword,
     };
     mutate({ data: dataUpdate });
   };

@@ -33,7 +33,7 @@ export const BREADCUMBS = {
   LIST_EVENT: 'Sự kiện Promotion quý 4',
   CREATE_EVENT: 'Tạo mới sự kiện',
   VIEW_EVENT: 'Xem sự kiện',
-
+  PRODUCT_VN: 'Sản phẩm',
   LIST_TAG: 'Danh sách tag',
   TAGS: 'Tags',
   EDIT_TAG: 'Chỉnh sửa Tag',

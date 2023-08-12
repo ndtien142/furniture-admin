@@ -95,6 +95,24 @@ const navConfig = [
           },
         ],
       },
+      {
+        // action: Action.READ,
+        // resource: Resource.TAG,
+        // actionAbility: ActionAbility.CAN,
+        title: 'Sản phẩm',
+        path: PATH_DASHBOARD.tag.root,
+        icon: ICONS.product,
+        children: [
+          {
+            title: 'Danh sách sản phẩm',
+            path: PATH_DASHBOARD.product.list,
+          },
+          {
+            title: 'Thêm mới sản phẩm',
+            path: PATH_DASHBOARD.product.new,
+          },
+        ],
+      },
     ],
   },
 ];
