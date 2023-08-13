@@ -1,11 +1,8 @@
 // routes
-import { PATH_DASHBOARD } from '../../../routes/paths';
+import {PATH_DASHBOARD} from '../../../routes/paths';
 // components
 import Iconify from 'src/common/components/Iconify';
-import i18n from 'src/common/locales/i18n';
 import SvgIconStyle from '../../../components/SvgIconStyle';
-import { Action, ActionAbility, Resource } from '../../../constants/common.interfaces';
-import vn from '../../../locales/vn';
 
 // ----------------------------------------------------------------------
 
@@ -92,6 +89,24 @@ const navConfig = [
           {
             title: 'Thêm mới Tag',
             path: PATH_DASHBOARD.tag.new,
+          },
+        ],
+      },
+      {
+        // action: Action.READ,
+        // resource: Resource.TAG,
+        // actionAbility: ActionAbility.CAN,
+        title: 'Category',
+        path: PATH_DASHBOARD.category.root,
+        icon: ICONS.menuItem,
+        children: [
+          {
+            title: 'Danh sách danh mục',
+            path: PATH_DASHBOARD.category.list,
+          },
+          {
+            title: 'Thêm mới danh mục',
+            path: PATH_DASHBOARD.category.new,
           },
         ],
       },
