@@ -7,7 +7,12 @@ const vn = {
     cancel: 'Huỷ bỏ',
     confirm: 'Xác nhận',
   },
-
+  CategoryList: {
+    Edit: {
+      successBar: "Cập nhật thành công",
+      errorBar: "Cập nhật thất bại"
+    }
+  },
   navTitle: {
     event: {
       root: 'Quản lý sự kiện',

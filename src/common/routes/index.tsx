@@ -1,5 +1,5 @@
-import { ElementType, lazy, Suspense } from 'react';
-import { Navigate, useLocation, useRoutes } from 'react-router-dom';
+import {ElementType, lazy, Suspense} from 'react';
+import {Navigate, useLocation, useRoutes} from 'react-router-dom';
 // hooks
 import useAuth from '../hooks/useAuth';
 // layouts
@@ -11,7 +11,7 @@ import GuestGuard from '../guards/GuestGuard';
 // config
 // components
 import LoadingScreen from '../components/LoadingScreen';
-import { PATH_AUTH, PATH_DASHBOARD } from './paths';
+import {PATH_DASHBOARD} from './paths';
 
 // ----------------------------------------------------------------------
 
@@ -98,7 +98,20 @@ export default function Router() {
             },
             {
               path: PATH_DASHBOARD.product.new,
-              element: <CreaetProductContainer />,
+              element: <CreateProductContainer />,
+            },
+          ],
+        },
+        {
+          path: PATH_DASHBOARD.category.root,
+          children: [
+            {
+              path: PATH_DASHBOARD.category.list,
+              element: <CategoryListContainer />,
+            },
+            {
+              path: PATH_DASHBOARD.category.edit_base,
+              element: <EditCategoryContainer />,
             },
           ],
         },
@@ -155,6 +168,14 @@ const EditTag = Loadable(lazy(() => import('src/tag/tag-edit/index')));
 const ProductListContainer = Loadable(
   lazy(() => import('src/product/list-product/index'))
 );
-const CreaetProductContainer = Loadable(
+const CreateProductContainer = Loadable(
   lazy(() => import('src/product/create-product/index'))
+);
+
+// Category
+const CategoryListContainer = Loadable(
+    lazy(() => import('src/category/list-category/index'))
+);
+const EditCategoryContainer = Loadable(
+    lazy(() => import('src/category/edit/index'))
 );

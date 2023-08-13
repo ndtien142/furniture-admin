@@ -1,4 +1,4 @@
-import { IMetaResponse } from '../../product/common/interface.common';
+import {IMetaResponse} from '../../product/common/interface.common';
 
 export interface ICategory {
   id: number;
@@ -6,11 +6,22 @@ export interface ICategory {
   description: string;
 }
 
+export interface ITransferCategory {
+  items: ICategory[];
+  meta: IMetaResponse;
+}
+
 export interface ICategoryResponse {
   status: string;
   message: string;
-  data: {
-    items: ICategory[];
-    meta: IMetaResponse;
-  };
+  data: ITransferCategory;
+}
+
+export interface IPropsTableRow {
+  row: ICategory;
+  // selected: boolean;
+  // onSelectRow: (checked: boolean) => void;
+  // onDeleteRow: VoidFunction;
+  onEditRow: VoidFunction;
+  // onDetailRow: VoidFunction;
 }

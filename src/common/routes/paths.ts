@@ -90,6 +90,7 @@ export const PATH_DASHBOARD = {
     root: path(ROOT_DASHBOARD, '/category'),
     new: path(ROOT_DASHBOARD, '/category/new'),
     list: path(ROOT_DASHBOARD, '/category/list'),
+    edit_base: path(ROOT_DASHBOARD, '/category/edit/:id'),
     edit: (categoryId: number) => path(ROOT_DASHBOARD, `/category/edit/${categoryId}`),
   },
   notify_management: {
