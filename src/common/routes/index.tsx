@@ -96,6 +96,10 @@ export default function Router() {
               path: PATH_DASHBOARD.product.list,
               element: <ProductListContainer />,
             },
+            {
+              path: PATH_DASHBOARD.product.new,
+              element: <CreaetProductContainer />,
+            },
           ],
         },
       ],
@@ -150,4 +154,7 @@ const EditTag = Loadable(lazy(() => import('src/tag/tag-edit/index')));
 // Product
 const ProductListContainer = Loadable(
   lazy(() => import('src/product/list-product/index'))
+);
+const CreaetProductContainer = Loadable(
+  lazy(() => import('src/product/create-product/index'))
 );

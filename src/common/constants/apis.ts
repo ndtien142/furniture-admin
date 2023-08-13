@@ -32,3 +32,5 @@ export const API_GAME_CHART = 'merchant/statistic-game';
 
 // Product
 export const API_GET_PRODUCT = '/products';
+export const API_CATEGORY = '/category';
+export const API_SUPPLIER = '/supplier';

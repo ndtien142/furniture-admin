@@ -6,6 +6,7 @@ import registerReducer from 'src/auth/register/register.slice';
 import merchantProfileReducer from 'src/profile/common/reducers/merchant-profile.slice';
 // product
 import tagListReducer from '../../tag/tag-list/tag.slice';
+import productSlice from '../../product/create-product/slice';
 
 // slices
 
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   register: registerReducer,
   merchantProfile: merchantProfileReducer,
   tagList: tagListReducer,
+  createProduct: productSlice,
 });
 
 export { rootPersistConfig, rootReducer };

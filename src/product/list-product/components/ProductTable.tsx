@@ -12,7 +12,6 @@ import React from 'react';
 import {
   TableHeadCustom,
   TableNoData,
-  TableSelectedActions,
   TableSkeleton,
 } from '../../../common/components/table';
 import { IProductParams } from '../interface';
@@ -90,7 +89,8 @@ const ProductTable = () => {
                 // onDetailRow={() => handleDetailProduct(row.id)}
               />
             ))}
-            {isLoading && <TableSkeleton />}
+            {isLoading &&
+              Array.from(Array(rowsPerPage)).map((e, i) => <TableSkeleton key={i} />)}
             <TableNoData isNotFound={isError} />
           </TableBody>
         </Table>
