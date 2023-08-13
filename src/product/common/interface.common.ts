@@ -12,6 +12,7 @@ export interface IMetaResponse {
 }
 
 export interface IProduct {
+  id: number;
   categoryId: number;
   description: string;
   imageUrl: string;
@@ -22,3 +23,8 @@ export interface IProduct {
   suplierId: number;
   unit: string;
 }
+
+export type IProductCallback = {
+  onSuccess: VoidFunction;
+  onError: VoidFunction;
+};
